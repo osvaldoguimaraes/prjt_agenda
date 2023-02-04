@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import Http404
 from .models import Contato
 
-# Create your views here. 
+# Create your views here.
 
 def index(request):
     contatos = Contato.objects.order_by('nome').filter(
