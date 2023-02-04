@@ -30,7 +30,7 @@ class Contato(models.Model): # Escrever models.Model é herança pois Model est�
     telefone = models.CharField(max_length=255)
     email = models.CharField(max_length=255, blank=True)
     data_criacao = models.DateTimeField(default=timezone.now)
-    decricao = models.TextField(blank=True)
+    decricao = models.TextField(blank=True) 
     categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING)
     mostrar = models.BooleanField(default = True) 
 

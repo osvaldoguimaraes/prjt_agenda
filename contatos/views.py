@@ -9,7 +9,7 @@ def index(request):
     contatos = Contato.objects.order_by('nome').filter(
         mostrar=True # Se quiser mostrar os contatos ocultos mudo para False
     )
-    paginator = Paginator(contatos, 1)
+    paginator = Paginator(contatos, 2)
     page = request.GET.get('p')
     contatos = paginator.get_page(page)
     return render(request, 'contatos/index.html', {
